@@ -17,21 +17,43 @@ namespace CarroApp1
 
        public int AlterarMarcha( float Velocidade)
         {
-            //switch( // velocidade )
-            //{
-            //    case -1:
-            //      if (  Velocidade > 20)
-            //            Velocidade = 20;
-            //       // return jhsdgfjd;
-            //        break;
 
+            switch (Velocidade)
+            {
+                case Velocidade == 0:
+                    _marcha = 0
+                    return _marcha;
+                    break;
 
-            //    case 0:
-            //        break;
+                case Velocidade < 20 && Velocidade > 0:
+                    _marcha = 1
+                    return _marcha;
+                    break;
 
+                case Velocidade < 40 && Velocidade > 20:
+                    _marcha = 2
+                    return _marcha;
+                    break;
 
+                case Velocidade < 50 && Velocidade > 40:
+                    _marcha = 3
+                    return _marcha;
+                    break;
+
+                case Velocidade < 60 && Velocidade > 50:
+                    _marcha = 4
+                    return _marcha;
+                    break;
+
+                default:
+                    return _marcha = 5;
+                    break;
 
             }
+          
+
+
+        }
         }
     }
 }
